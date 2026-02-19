@@ -220,6 +220,8 @@
             width: 200,
             hozAlign: "center",
             cellClick: function (e, cell) {
+              e.stopPropagation();
+
               const rowData = cell.getRow().getData();
 
               const viewBtn = e.target.closest(".view-btn");
@@ -242,6 +244,11 @@
         ],
       });
       table.on("rowClick", function (e, row) {
+        if (e.target.closest(".view-btn") ||
+      e.target.closest(".edit-btn") ||
+      e.target.closest(".delete-btn")) {
+    return;
+  }
         alert("Row Clicked");
       });
 
