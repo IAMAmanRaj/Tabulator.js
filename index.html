@@ -14,6 +14,19 @@
     ></script>
   </head>
   <body>
+    <div id="filter-controls">
+      <input type="text" id="filter-name" placeholder="Search Player Name..." />
+      <input type="number" id="filter-price" placeholder="Max Price..." />
+      <select id="filter-team">
+        <option value="">All Teams</option>
+        <option value="RCB">RCB</option>
+        <option value="MI">MI</option>
+        <option value="CSK">CSK</option>
+      </select>
+      <button id="filter-btn">Filter</button>
+      <button id="clear-btn">Clear</button>
+    </div>
+
     <div id="players"></div>
 
     <script type="module" src="js/main.js"></script>
