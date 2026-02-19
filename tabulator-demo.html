@@ -18,79 +18,78 @@
 
     <script type="text/javascript">
       var tableData = [
-  {
-    playerId: 1,
-    playerName: "Patrick Mahomes",
-    price: "45",
-    team: "KC",
-    joiningDate: "04/27/2017",
-  },
-  {
-    playerId: 2,
-    playerName: "Tom Brady",
-    price: "30",
-    team: "TB",
-    joiningDate: "04/16/2020",
-  },
-  {
-    playerId: 3,
-    playerName: "Aaron Rodgers",
-    price: "37",
-    team: "NYJ",
-    joiningDate: "04/26/2023",
-  },
-  {
-    playerId: 4,
-    playerName: "Josh Allen",
-    price: "43",
-    team: "BUF",
-    joiningDate: "04/26/2018",
-  },
-  {
-    playerId: 5,
-    playerName: "Joe Burrow",
-    price: "46",
-    team: "CIN",
-    joiningDate: "07/31/2020",
-  },
-  {
-    playerId: 6,
-    playerName: "Dak Prescott",
-    price: "40",
-    team: "DAL",
-    joiningDate: "04/30/2016",
-  },
-  {
-    playerId: 7,
-    playerName: "Jalen Hurts",
-    price: "44",
-    team: "PHI",
-    joiningDate: "04/24/2020",
-  },
-  {
-    playerId: 8,
-    playerName: "Lamar Jackson",
-    price: "42",
-    team: "BAL",
-    joiningDate: "06/05/2018",
-  },
-  {
-    playerId: 9,
-    playerName: "Christian McCaffrey",
-    price: "38",
-    team: "SF",
-    joiningDate: "10/20/2022",
-  },
-  {
-    playerId: 10,
-    playerName: "Travis Kelce",
-    price: "34",
-    team: "KC",
-    joiningDate: "06/06/2013",
-  },
-];
+        {
+          playerId: 1,
+          playerName: "Patrick Mahomes",
+          price: "45",
+          team: "KC",
+          joiningDate: "04/27/2017",
+        },
+        {
+          playerId: 2,
+          playerName: "Tom Brady",
+          price: "30",
+          team: "TB",
+          joiningDate: "04/16/2020",
+        },
+        {
+          playerId: 3,
+          playerName: "Aaron Rodgers",
+          price: "37",
+          team: "NYJ",
+          joiningDate: "04/26/2023",
+        },
+        {
+          playerId: 4,
+          playerName: "Josh Allen",
+          price: "43",
+          team: "BUF",
+          joiningDate: "04/26/2018",
+        },
+        {
+          playerId: 5,
+          playerName: "Joe Burrow",
+          price: "46",
+          team: "CIN",
+          joiningDate: "07/31/2020",
+        },
+        {
+          playerId: 6,
+          playerName: "Dak Prescott",
+          price: "40",
+          team: "DAL",
+          joiningDate: "04/30/2016",
+        },
+        {
+          playerId: 7,
+          playerName: "Jalen Hurts",
+          price: "44",
+          team: "PHI",
+          joiningDate: "04/24/2020",
+        },
+        {
+          playerId: 8,
+          playerName: "Lamar Jackson",
+          price: "42",
+          team: "BAL",
+          joiningDate: "06/05/2018",
+        },
+        {
+          playerId: 9,
+          playerName: "Christian McCaffrey",
+          price: "38",
+          team: "SF",
+          joiningDate: "10/20/2022",
+        },
+        {
+          playerId: 10,
+          playerName: "Travis Kelce",
+          price: "34",
+          team: "KC",
+          joiningDate: "06/06/2013",
+        },
+      ];
 
-      
       var table = new Tabulator("#players", {
         height: 220,
         data: tableData,
@@ -133,9 +132,9 @@
             hozAlign: "center",
           },
         ],
-        rowClick: function (e, row) {
-          alert("Row : " + row.getData().price + "Clicked");
-        },
+      });
+      table.on("rowClick", function (e, row) {
+        alert("Row: " + row.getData().price + " Clicked");
       });
     </script>
   </body>
