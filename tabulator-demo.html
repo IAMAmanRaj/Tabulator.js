@@ -88,14 +88,85 @@
           team: "KC",
           joiningDate: "06/06/2013",
         },
+        {
+  playerId: 11,
+  playerName: "Tua Tagovailoa",
+  price: "36",
+  team: "MIA",
+  joiningDate: "04/23/2020",
+},
+{
+  playerId: 12,
+  playerName: "Justin Herbert",
+  price: "41",
+  team: "LAC",
+  joiningDate: "04/23/2020",
+},
+{
+  playerId: 13,
+  playerName: "Matthew Stafford",
+  price: "35",
+  team: "LAR",
+  joiningDate: "03/18/2021",
+},
+{
+  playerId: 14,
+  playerName: "Kirk Cousins",
+  price: "33",
+  team: "ATL",
+  joiningDate: "03/13/2024",
+},
+{
+  playerId: 15,
+  playerName: "Trevor Lawrence",
+  price: "39",
+  team: "JAX",
+  joiningDate: "04/29/2021",
+},
+{
+  playerId: 16,
+  playerName: "Brock Purdy",
+  price: "28",
+  team: "SF",
+  joiningDate: "04/30/2022",
+},
+{
+  playerId: 17,
+  playerName: "Russell Wilson",
+  price: "31",
+  team: "PIT",
+  joiningDate: "03/15/2024",
+},
+{
+  playerId: 18,
+  playerName: "Derrick Henry",
+  price: "32",
+  team: "BAL",
+  joiningDate: "03/13/2024",
+},
+{
+  playerId: 19,
+  playerName: "Tyreek Hill",
+  price: "29",
+  team: "MIA",
+  joiningDate: "03/23/2022",
+},
+{
+  playerId: 20,
+  playerName: "Stefon Diggs",
+  price: "30",
+  team: "HOU",
+  joiningDate: "04/03/2024",
+}
       ];
 
       var table = new Tabulator("#players", {
-        height: 220,
+        height: 300,
         data: tableData,
         layout: "fitColumns",
-        pagination: "local",
-        paginationSize: 5,
+        pagination: true,
+        paginationSize: 8,
+        paginationSizeSelector: [8, 16, 24],
         tooltips: true,
         columns: [
           {
