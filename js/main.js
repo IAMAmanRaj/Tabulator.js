@@ -2,7 +2,7 @@ import { players } from "./player-data.js";
 import { getColumns } from "./players.table.js";
 
 var table = new Tabulator("#players", {
-  height: 300,
+  height: 400,
   data: players,
   layout: "fitColumns",
   pagination: true,

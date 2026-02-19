@@ -1,7 +1,7 @@
 import { btnActions } from "./btn-actions.js";
 
 export function getColumns() {
-    return [
+  return [
     {
       title: "Player Name",
       field: "playerName",
@@ -12,7 +12,7 @@ export function getColumns() {
       headerFilter: "input",
     },
     {
-      title: "Player price",
+      title: "Player Price",
       field: "price",
       sorter: "number",
       hozAlign: "center",
@@ -29,9 +29,22 @@ export function getColumns() {
       editor: "select",
       headerFilter: true,
       headerFilterParams: {
-        RCB: "RCB",
-        MI: "MI",
-        CSK: "CSK",
+        ATL: "ATL",
+        BAL: "BAL",
+        BUF: "BUF",
+        CIN: "CIN",
+        DAL: "DAL",
+        HOU: "HOU",
+        JAX: "JAX",
+        KC: "KC",
+        LAC: "LAC",
+        LAR: "LAR",
+        MIA: "MIA",
+        NYJ: "NYJ",
+        PHI: "PHI",
+        PIT: "PIT",
+        SF: "SF",
+        TB: "TB",
       },
     },
     {
@@ -46,17 +59,16 @@ export function getColumns() {
       formatter: actionFormatter,
       width: 200,
       hozAlign: "center",
-      cellClick: actionClickHandler
+      cellClick: actionClickHandler,
     },
   ];
 }
 
-
 function actionFormatter() {
   return `
-    <button data-action="view">View</button>
-    <button data-action="edit">Edit</button>
-    <button data-action="delete">Delete</button>
+    <button class="action-btn" data-action="view">View</button>
+    <button class="action-btn" data-action="edit">Edit</button>
+    <button class="action-btn" data-action="delete">Delete</button>
   `;
 }
 
@@ -67,5 +79,5 @@ function actionClickHandler(e, cell) {
   e.stopPropagation();
 
   const rowData = cell.getRow().getData();
-  btnActions[action](rowData); 
+  btnActions[action](rowData);
 }

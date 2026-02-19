@@ -3,57 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tabulator-Demo</title>
+    <title>NFL Players</title>
     <link
       href="https://unpkg.com/tabulator-tables@6.3.1/dist/css/tabulator.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/table.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header">
+        <h1>NFL Players</h1>
+      </header>
+
+      <div class="filter-card">
+        <div class="filter-grid">
+          <div class="filter-field">
+            <label for="filter-name">Player Name</label>
+            <input type="text" id="filter-name" placeholder="Search name..." />
+          </div>
+          <div class="filter-field">
+            <label for="filter-price">Max Price</label>
+            <input type="number" id="filter-price" placeholder="e.g. 40" />
+          </div>
+          <div class="filter-field">
+            <label for="filter-team">Team</label>
+            <select id="filter-team">
+              <option value="">All Teams</option>
+              <option value="ATL">ATL</option>
+              <option value="BAL">BAL</option>
+              <option value="BUF">BUF</option>
+              <option value="CIN">CIN</option>
+              <option value="DAL">DAL</option>
+              <option value="HOU">HOU</option>
+              <option value="JAX">JAX</option>
+              <option value="KC">KC</option>
+              <option value="LAC">LAC</option>
+              <option value="LAR">LAR</option>
+              <option value="MIA">MIA</option>
+              <option value="NYJ">NYJ</option>
+              <option value="PHI">PHI</option>
+              <option value="PIT">PIT</option>
+              <option value="SF">SF</option>
+              <option value="TB">TB</option>
+            </select>
+          </div>
+          <div class="filter-actions">
+            <button id="filter-btn" class="btn btn-primary">Filter</button>
+            <button id="clear-btn" class="btn btn-secondary">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <div id="players"></div>
+      </div>
+
+      <footer class="page-footer">
+        made with &#10084;&#65039;, by Aman
+      </footer>
+    </div>
+
     <script
       type="text/javascript"
       src="https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js"
     ></script>
-  </head>
-  <body>
-    <div id="filter-controls">
-      <input type="text" id="filter-name" placeholder="Search Player Name..." />
-      <input type="number" id="filter-price" placeholder="Max Price..." />
-      <select id="filter-team">
-        <option value="">All Teams</option>
-        <option value="ATL">ATL</option>
-        <option value="BAL">BAL</option>
-        <option value="BUF">BUF</option>
-        <option value="CIN">CIN</option>
-        <option value="DAL">DAL</option>
-        <option value="HOU">HOU</option>
-        <option value="JAX">JAX</option>
-        <option value="KC">KC</option>
-        <option value="LAC">LAC</option>
-        <option value="LAR">LAR</option>
-        <option value="MIA">MIA</option>
-        <option value="NYJ">NYJ</option>
-        <option value="PHI">PHI</option>
-        <option value="PIT">PIT</option>
-        <option value="SF">SF</option>
-        <option value="TB">TB</option>
-      </select>
-      <button id="filter-btn">Filter</button>
-      <button id="clear-btn">Clear</button>
-    </div>
-
-    <div id="players"></div>
-
-    <footer
-      style="
-        text-align: center;
-        padding: 16px;
-        margin-top: 24px;
-        font-size: 14px;
-        color: #666;
-      "
-    >
-      made with ❤️, by Aman
-    </footer>
-
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
+  
